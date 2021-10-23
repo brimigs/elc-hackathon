@@ -1,13 +1,5 @@
 import logo from '../Estee-Lauder-Logo.png';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import ElcRouter from '../Components/Router';
-// Might have to import the pages
 
 
 export default function Color() {
@@ -23,14 +15,8 @@ export default function Color() {
                                
               </div>
 	
-
-        <ElcRouter/>
         
       </header>
-
-
-      
-
 
     <footer id="footer">
 				<p class="copyright"> The Estee Lauder Expereince: Your everyday personal assistant.</p>

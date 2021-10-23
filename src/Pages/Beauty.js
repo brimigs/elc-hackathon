@@ -1,16 +1,5 @@
 import logo from '../Estee-Lauder-Logo.png';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-
-// import Color from './Color'
-import ElcRouter from '../Components/Router';
-// Might have to import the pages
 
 
 export default function Beauty() {
@@ -22,7 +11,7 @@ export default function Beauty() {
           <h1>Welcome to the Beauty Lab</h1>
           <button alt="Button to scan a product"> Scan A Product </button>                
         </div>
-      <ElcRouter/>
+
     
     </header>
     <footer id="footer">
