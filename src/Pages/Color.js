@@ -1,12 +1,5 @@
-import logo from '../Estee-Lauder-Logo.png';
+import logo from '../static/Estee-Lauder-Logo.png';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import ElcRouter from '../Components/Router';
 // Might have to import the pages
 
 
@@ -16,16 +9,11 @@ export default function Color() {
       <header id="header">
         <img src={logo} className="App-logo" alt="Estee Lauder Logo" />
        
-							<div class="inner">
+							<div className="inner">
 								<h1>Welcome to the Color Lab</h1>
                 <p> Take a selfie to get an accurate color match for makeup. </p>
-                <button> Scan Now </button>
-                               
-              </div>
-	
-
-        <ElcRouter/>
-        
+                <button> Scan Now </button>                       
+        </div>        
       </header>
 
 
@@ -33,13 +21,14 @@ export default function Color() {
 
 
     <footer id="footer">
-				<p class="copyright"> The Estee Lauder Expereince: Your everyday personal assistant.</p>
+				<p className="copyright"> The Estee Lauder Expereince: Your everyday personal assistant.</p>
 			</footer>
-      <script src="static/jquery.min"></script>
-			<script src="static/browser.min"></script>
-			<script src="static/breakpoints.min"></script>
-			<script src="static/util"></script>
-			<script src="static/main"></script>
+
+      <script src="../static/jquery.min.js"></script>
+      <script src="../static/browser.min.js"></script>
+      <script src="../static/breakpoints.min.js"></script>
+      <script src="../static/util.js"></script>
+      <script src="../static/main.js"></script>
   </div>
   );
 }
