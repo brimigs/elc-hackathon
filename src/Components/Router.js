@@ -6,6 +6,10 @@ import {
   Link
 } from "react-router-dom";
 
+import Beauty from '../Pages/Beauty'
+import Color from '../Pages/Color'
+import App from '../App'
+// Might have to import the pages
 
 
 export default function ElcRouter() {
@@ -14,27 +18,27 @@ export default function ElcRouter() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/App">Home</Link>
           </li>
           <li>
-            <Link to="/Beauty">Beauty</Link>
+            <Link to="/Beauty">Get Ready with Me</Link>
           </li>
           <li>
-            <Link to="/Color">Color</Link>
+            <Link to="/Color">Find Your Shades</Link>
           </li>
         </ul>
 
         <hr />
-        
+
         <Switch>
-          <Route exact path="/">
-            <Home />
+          <Route exact path="/App">
+            <App />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route exact path="/Beauty">
+            <Beauty />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route exact path="/Color">
+            <Color />
           </Route>
         </Switch>
       </div>
