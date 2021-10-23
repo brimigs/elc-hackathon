@@ -1,6 +1,5 @@
 import logo from '../static/Estee-Lauder-Logo.png';
 import React from "react";
-// Might have to import the pages
 
 
 export default function Color() {
@@ -12,13 +11,12 @@ export default function Color() {
 							<div className="inner">
 								<h1>Welcome to the Color Lab</h1>
                 <p> Take a selfie to get an accurate color match for makeup. </p>
-                <button> Scan Now </button>                       
-        </div>        
+                <button> Scan Now </button>
+                               
+              </div>
+	
+        
       </header>
-
-
-      
-
 
     <footer id="footer">
 				<p className="copyright"> The Estee Lauder Expereince: Your everyday personal assistant.</p>
