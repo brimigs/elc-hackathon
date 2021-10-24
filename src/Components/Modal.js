@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Camera from '../Components/Camera';
 import WebcamCapture from "./Camera"
+import { styled } from '@mui/material/styles'
 
 const style = {
     position: 'absolute',
@@ -17,6 +18,13 @@ const style = {
     boxShadow: 24,
     p: 4,
   };
+  
+  const MainButton = styled(Button)({
+    fontSize: "0.9rem",
+    letterSpacing: "0.22em",
+    padding: "0.6rem 2rem",
+    marginTop: "0.6rem",
+  });
 
 export default function BasicModal() {
     const [open, setOpen] = React.useState(false);
@@ -25,7 +33,7 @@ export default function BasicModal() {
   
     return (
       <div>
-        <Button onClick={handleOpen}>Scan a Product</Button>
+        <MainButton variant="contained" alt="Button to scan a product" onClick={handleOpen}>Scan Product</MainButton>
         <Modal
           open={open}
           onClose={handleClose}

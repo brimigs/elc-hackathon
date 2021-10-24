@@ -27,9 +27,7 @@ export default function Header() {
   content = (
     <React.Fragment>
         <h1>Welcome to the Beauty Lab</h1>
-            
-        <MainButton variant="contained" alt="Button to scan a product"> <BasicModal variant="contained" alt="Button to scan a product"/> Scan A Product</MainButton>                
-
+         <BasicModal />   
     </React.Fragment>)
   }
   else if (window.location.pathname === "/App") {
@@ -45,7 +43,7 @@ export default function Header() {
       <React.Fragment>
             <h1>Welcome to the Color Lab</h1>
             <p> Take a selfie to get an accurate color match for makeup. </p>
-            <MainButton variant="contained" alt="Button to scan now"> Scan Now </MainButton>
+            <BasicModal />  
       </React.Fragment>
     )
   }
