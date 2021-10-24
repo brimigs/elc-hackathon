@@ -9,27 +9,27 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: '#fff'
+    },
+    secondary: {
+      main: '#040a2b'
+    }
+  },
+  typography: {
+    FontFamily: 'Helvetica',
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
+    <ThemeProvider theme={theme}>
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/App">Home</Link>
-          </li>
-          <li>
-            <Link to="/Beauty">Get Ready with Me</Link>
-          </li>
-          <li>
-            <Link to="/Color">Find Your Shades</Link>
-          </li>
-        </ul>
-
-        <hr />
-
         <Switch>
           <Route exact path="/App">
             <App />
@@ -41,15 +41,10 @@ ReactDOM.render(
             <Color />
           </Route>
         </Switch>
-      </div>
     </Router>
-    <script src="./static/jquery.min.js"></script>
-    <script src="./static/browser.min.js"></script>
-    <script src="./static/breakpoints.min.js"></script>
-    <script src="./static/util.js"></script>
-    <script src="./static/main.js"></script>
+    </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('react-nav')
+  document.getElementById('root')
 );
 
 

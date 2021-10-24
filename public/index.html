@@ -15,24 +15,14 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="/static/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/static/main.css" />
+    <noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
     <title>Iris</title>
   </head>
-  <body>
+  <body class="is-preload">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!--
-      <div id="root"></div>
-    -->
-    <div id="wrapper">
-        <header id="header">
-        <!-- Header -->
-          <div id="react-nav"/>
-          <br>
-            <!-- Footer -->
-          <footer id="footer">
-            <p className="copyright"> The Estee Lauder Expereince: Your everyday personal assistant.</p>
-          </footer>
-
-      </div>
+      <div id="root"/>
       <script src="/static/jquery.min.js"></script>
 			<script src="/static/browser.min.js"></script>
 			<script src="/static/breakpoints.min.js"></script>
