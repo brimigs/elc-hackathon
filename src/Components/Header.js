@@ -28,7 +28,7 @@ export default function Header() {
     <React.Fragment>
         <h1>Welcome to the Beauty Lab</h1>
             
-        <MainButton className={classes.centralButton} variant="contained" alt="Button to scan a product"> <BasicModal className={classes.centralButton} variant="contained" alt="Button to scan a product"/> Scan A Product</MainButton>                
+        <MainButton variant="contained" alt="Button to scan a product"> <BasicModal variant="contained" alt="Button to scan a product"/> Scan A Product</MainButton>                
 
     </React.Fragment>)
   }
