@@ -217,4 +217,4 @@ def get_skin_tone(image, print_flag = False):
     rgb_vals = dominantColors[0]['color']
     rgb_vals = [x/255. for x in rgb_vals]
     hsv_vals = colorsys.rgb_to_hsv(rgb_vals[0], rgb_vals[1], rgb_vals[2])
-    return (hsv_vals[0]*255., hsv_vals[1]*100., hsv_vals[2]*100.)
+    return (hsv_vals[0]*360., hsv_vals[1]*100., hsv_vals[2]*100.)
