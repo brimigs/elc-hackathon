@@ -1,22 +1,40 @@
 import React from "react";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import {
+  Box,
+  Button,
+  Typography,
+  Modal,
+  Grow,
+  Container,
+  IconButton
+} from '@mui/material';
 import Camera from '../Components/Camera';
+import CloseIcon from '@mui/icons-material/Close';
 import WebcamCapture from "./Camera"
 import { styled } from '@mui/material/styles'
 
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 700,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
+    mainBox: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: 700,
+      bgcolor: 'background.paper',
+      border: '2px solid #000',
+      boxShadow: 24,
+      p: 4,
+      minHeight: '65%',
+      overflowY: 'scroll',
+      borderRadius: 10,
+      display: 'flex',
+      flexDirection: "column",
+    },
+    heading: {
+      minHeight: 50,
+      display: 'flex',
+      justifyContent: "flex-end"
+    }
   };
   
   const MainButton = styled(Button)({
@@ -25,6 +43,7 @@ const style = {
     padding: "0.6rem 2rem",
     marginTop: "0.6rem",
   });
+
 
 export default function ColorModal() {
     const [open, setColorOpen] = React.useState(false);
@@ -40,7 +59,12 @@ export default function ColorModal() {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
+          <Box sx={style.mainBox}>
+            <Box sx={style.heading}>
+                <IconButton aria-label="close" onClick={handleColorClose}>
+                    <CloseIcon />
+                </IconButton>
+            </Box>
             <WebcamCapture />
             
           </Box>

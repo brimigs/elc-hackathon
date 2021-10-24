@@ -8,12 +8,19 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles'
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
+import LoopIcon from '@mui/icons-material/Loop';
 import Stack from '@mui/material/Stack';
 import axios from 'axios';
 import qs from 'qs';
 
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+
+const style = {
+  display: 'flex',
+  width: '100%',
+  flexDirection: 'column',
+}
 
 const MainButton = styled(Button)({
   fontSize: "0.9rem",
@@ -26,7 +33,7 @@ export default function  WebcamCapture  () {
     const webcamRef = React.useRef(null);
     const [imgSrc, setImgSrc] = React.useState(null);
     const [toggle, setToggle] = React.useState(false);
-    const [loading, setLoading] = React.useState(false)
+    const [loading, setLoading] = React.useState(false);
 
     const capture = React.useCallback(() => {
       const imageSrc = webcamRef.current.getScreenshot();
@@ -49,33 +56,25 @@ export default function  WebcamCapture  () {
     return (
       <React.Fragment>
         <Loading open={loading}/>
-        <Webcam
-          audio={false}
-          ref={webcamRef}
-          screenshotFormat="image/jpeg"
-        />
-        <MainButton variant="contained" alt="Button to scan a product" onClick={capture}>Capture photo</MainButton>
-        {imgSrc && (
-          // <Button>Delete</Button>
-          // <Button >Send</Button>
-          <img
-            src={imgSrc}
-          />
-          
-          
-        )
-        // && <Button>Delete</Button>
-        // && 
-        // <Button >a</Button>
-}
-           {toggle && <Stack direction="row" spacing={2}>
-          <Button variant="outlined" startIcon={<DeleteIcon />}>
-            Delete
-          </Button>
-          <Button variant="contained" endIcon={<SendIcon />} onClick={submitImage}>
-            Send
-          </Button>
-        </Stack>}
+        { !toggle ? 
+          <React.Fragment>
+            <Webcam
+              audio={false}
+              ref={webcamRef}
+              screenshotFormat="image/jpeg"
+            />
+            <MainButton variant="contained" alt="Button to scan a product" onClick={capture}>Capture Photo</MainButton>
+          </React.Fragment>
+         :  
+          <React.Fragment>
+            <img src={imgSrc} alt="Photo taken"/>
+
+            <Box sx={style}>
+            <MainButton variant="contained" endIcon={<LoopIcon />} onClick={() => {setToggle(!toggle)}} alt="Submit photo">Take Again</MainButton>
+            <MainButton variant="contained" endIcon={<SendIcon />} onClick={submitImage} alt="Submit photo">Submit</MainButton>
+            </Box>
+          </React.Fragment>
+       }
       </React.Fragment>
     );
   };
