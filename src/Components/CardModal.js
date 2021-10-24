@@ -38,45 +38,37 @@ export default function CardModal() {
   
     return (
       <div>
-        {/* <MainButton variant="contained" alt="Button to scan a product" onClick={handleColorOpen}>Results</MainButton>
-        <Modal
-          open={open}
-          onClose={handleColorClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={style}> */}
           <div class="inner">
                 <h1>Your results:</h1>
             </div>
             <div class = "cards">
 
                 <div class="card">
-                <img src={foundation} alt="Estee Lauder Double Wear Stay-in-Place Foundation" style="width:100%"></img>
+                <img src={foundation} alt="Estee Lauder Double Wear Stay-in-Place Foundation" ></img>
                 <h4><b>Foundation</b></h4>
                 <p>0N1 ALABASTER</p>
                 </div>
                 
                 <div class="card">
-                <img src={concealer}  alt="Double Wear Stay-in-Place Flawless Wear Concealer" style="width:100%"></img>
+                <img src={concealer}  alt="Double Wear Stay-in-Place Flawless Wear Concealer"></img>
                 <h4><b>Concealer</b></h4>
                 <p>1C Light (COOL)</p>
                 </div>
                 
                 <div class="card">
-                <img src={eyebrows} alt="Brow Now Brow Defining Pencil" style="width:100%"></img>
+                <img src={eyebrows} alt="Brow Now Brow Defining Pencil"></img>
                 <h4><b>Eyebrows</b></h4>
                 <p>Dark Brunette</p>
                 </div>
                 
                 <div class="card">
-                <img src={blush}  alt="Pure Color Envy Sculpting Blush" style="width:100%"></img>
+                <img src={blush}  alt="Pure Color Envy Sculpting Blush"></img>
                 <h4><b>Blush</b></h4>
                 <p>220 Pink Kiss</p>
                 </div>
                 
                 <div class="card">
-                <img src={bronzer} alt="Bronze Goddess Powder Bronzer" style="width:100%"></img>
+                <img src={bronzer} alt="Bronze Goddess Powder Bronzer"></img>
                 <h4><b>Bronzer</b></h4>
                 <p>Light</p>
                 </div>

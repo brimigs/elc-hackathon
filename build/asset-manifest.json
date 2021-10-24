@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2625236.chunk.css",
-    "main.js": "/static/js/main.7881ae17.chunk.js",
-    "main.js.map": "/static/js/main.7881ae17.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ef79d953.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ef79d953.js.map",
-    "static/js/2.9558054d.chunk.js": "/static/js/2.9558054d.chunk.js",
-    "static/js/2.9558054d.chunk.js.map": "/static/js/2.9558054d.chunk.js.map",
-    "static/js/3.f9196f53.chunk.js": "/static/js/3.f9196f53.chunk.js",
-    "static/js/3.f9196f53.chunk.js.map": "/static/js/3.f9196f53.chunk.js.map",
+    "main.css": "/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/static/js/main.2ef8946d.chunk.js",
+    "main.js.map": "/static/js/main.2ef8946d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ca4f2d35.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ca4f2d35.js.map",
+    "static/js/2.cf1932b6.chunk.js": "/static/js/2.cf1932b6.chunk.js",
+    "static/js/2.cf1932b6.chunk.js.map": "/static/js/2.cf1932b6.chunk.js.map",
+    "static/js/3.e8ad6a78.chunk.js": "/static/js/3.e8ad6a78.chunk.js",
+    "static/js/3.e8ad6a78.chunk.js.map": "/static/js/3.e8ad6a78.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.d2625236.chunk.css.map": "/static/css/main.d2625236.chunk.css.map",
-    "static/js/2.9558054d.chunk.js.LICENSE.txt": "/static/js/2.9558054d.chunk.js.LICENSE.txt",
-    "static/media/Estee-Lauder-Logo.2c02464e.png": "/static/media/Estee-Lauder-Logo.2c02464e.png"
+    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.cf1932b6.chunk.js.LICENSE.txt": "/static/js/2.cf1932b6.chunk.js.LICENSE.txt",
+    "static/media/Blush.4175414a.png": "/static/media/Blush.4175414a.png",
+    "static/media/Estee-Lauder-Logo.2c02464e.png": "/static/media/Estee-Lauder-Logo.2c02464e.png",
+    "static/media/bronzer.3a181a24.png": "/static/media/bronzer.3a181a24.png",
+    "static/media/foundation.9a48cecf.webp": "/static/media/foundation.9a48cecf.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.ef79d953.js",
-    "static/js/2.9558054d.chunk.js",
-    "static/css/main.d2625236.chunk.css",
-    "static/js/main.7881ae17.chunk.js"
+    "static/js/runtime-main.ca4f2d35.js",
+    "static/js/2.cf1932b6.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.2ef8946d.chunk.js"
   ]
 }

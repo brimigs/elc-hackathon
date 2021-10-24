@@ -24,14 +24,14 @@ const NavButton = styled(MainButton)({
 export default function Header() {
   var content;
 
-  if (window.location.pathname === "/Beauty") {
+  if (window.location.pathname === "/Beauty/") {
   content = (
     <React.Fragment>
         <h1>Welcome to the Beauty Lab</h1>
          <BasicModal />   
     </React.Fragment>)
   }
-  else if (window.location.pathname === "/App") {
+  else if (window.location.pathname === "/App/") {
     content = (
     <React.Fragment>
           <h1>Hi, I'm Iris! </h1><br/> <h2>Your personal beauty assistant</h2> 
@@ -39,7 +39,7 @@ export default function Header() {
           <MainButton variant="contained" alt="Button to chat now"> Chat Now </MainButton> 
     </React.Fragment>)
   }
-  else if (window.location.pathname === "/Color") {
+  else if (window.location.pathname === "/Color/") {
     content = (
       <React.Fragment>
             <h1>Welcome to the Color Lab</h1>

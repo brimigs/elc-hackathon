@@ -14,11 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 
-import backend.views as views
+import backend_app.views as views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    # basic pages
+    re_path(r'^$', views.basic, name='index'),
+    re_path(r'^App/$', views.basic, name='app'),
+    re_path(r'^Beauty/$', views.basic, name='beauty'),
+    re_path(r'^Color/$', views.basic, name='color'),
+
+    # REST API endpoints
+    re_path(r'^api/skinTone/$', views.skin_tone, name="skin_tone"),
+
     path('admin/', admin.site.urls),
 ]
