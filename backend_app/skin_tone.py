@@ -4,7 +4,6 @@ from sklearn.cluster import KMeans
 from collections import Counter
 import imutils
 import pprint
-from matplotlib import pyplot as plt
 import colorsys
 import os
 
@@ -180,39 +179,12 @@ def get_skin_tone(image, print_flag = False):
     # Resize image to a width of 250
     image = imutils.resize(image, width=250)
 
-    # Show image
-    if print_flag:
-        plt.subplot(3, 1, 1)
-        plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-        plt.title("Original Image")
-        # plt.show()
-
     # Apply Skin Mask
     skin = extractSkin(image)
-    if print_flag:
-        plt.subplot(3, 1, 2)
-        plt.imshow(cv2.cvtColor(skin, cv2.COLOR_BGR2RGB))
-        plt.title("Thresholded  Image")
-        # plt.show()
 
     # Find the dominant color. Default is 1 , pass the parameter 'number_of_colors=N' where N is the specified number of colors
     dominantColors = extractDominantColor(skin, hasThresholding=True)
 
-    # Show in the dominant color information
-    if print_flag:
-        print("Color Information")
-        print(dominantColors)
-
-        # Show in the dominant color as bar
-        print("Color Bar")
-        colour_bar = plotColorBar(dominantColors)
-        plt.subplot(3, 1, 3)
-        plt.axis("off")
-        plt.imshow(colour_bar)
-        plt.title("Color Bar")
-
-        plt.tight_layout()
-        plt.show()
 
     # fetch the RGB
     rgb_vals = dominantColors[0]['color']

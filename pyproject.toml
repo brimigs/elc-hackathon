@@ -6,7 +6,6 @@ authors = ["dchaebae <dkchae@princeton.edu>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-matplotlib = "^3.4.3"
 sklearn = "^0.0"
 imutils = "^0.5.4"
 Django = "^3.2.8"
