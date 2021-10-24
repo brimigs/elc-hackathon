@@ -1,26 +1,30 @@
 import React from "react";
 import logo from '../static/Estee-Lauder-Logo.png';
 import Button from '@mui/material/Button';
-import {makeStyles} from '@mui/styles'
+import { styled } from '@mui/material/styles'
 
-const useStyles = makeStyles(theme => ({
-  centralButton: {
-    width: "10rem",
-    height: "3rem",
-    letterSpacing: "0.2rem"
-  },
-}))
+const MainButton = styled(Button)({
+  fontSize: "0.9rem",
+  letterSpacing: "0.22em",
+  padding: "0.6rem 2rem",
+  marginTop: "0.6rem",
+});
+
+const NavButton = styled(MainButton)({
+  margin: "0",
+  width: "100%",
+  height: "100%",
+  padding: "0.6rem 1rem"
+})
 
 export default function Header() {
-  const classes = useStyles();
-
   var content;
 
   if (window.location.pathname === "/Beauty") {
   content = (
     <React.Fragment>
         <h1>Welcome to the Beauty Lab</h1>
-        <Button className={classes.centralButton} variant="contained" alt="Button to scan a product"> Scan A Product </Button>                
+        <MainButton variant="contained" alt="Button to scan a product"> Scan A Product </MainButton>                
     </React.Fragment>)
   }
   else if (window.location.pathname === "/App") {
@@ -28,7 +32,7 @@ export default function Header() {
     <React.Fragment>
           <h1>Hi, I'm Iris! </h1><br/> <h2>Your personal beauty assistant</h2> 
           <p> I'm here to help you through your beauty journey. </p>
-          <Button className={classes.centralButton} variant="contained" alt="Button to chat now"> Chat Now </Button> 
+          <MainButton variant="contained" alt="Button to chat now"> Chat Now </MainButton> 
     </React.Fragment>)
   }
   else if (window.location.pathname === "/Color") {
@@ -36,7 +40,7 @@ export default function Header() {
       <React.Fragment>
             <h1>Welcome to the Color Lab</h1>
             <p> Take a selfie to get an accurate color match for makeup. </p>
-            <Button className={classes.centralButton} variant="contained" alt="Button to scan now"> Scan Now </Button>
+            <MainButton variant="contained" alt="Button to scan now"> Scan Now </MainButton>
       </React.Fragment>
     )
   }
@@ -53,8 +57,8 @@ export default function Header() {
       </div>
       <nav className = "use-middle">
         <ul>
-          <li><Button>Get Ready with Me</Button></li>
-          <li class="is-middle"><a href="/Color">Find Your Shades</a></li>
+          <li><NavButton onClick={() => {window.location.href="/Beauty"}}>Get Ready with Me</NavButton></li>
+          <li class="is-middle" onClick={() => {window.location.href="/Color"}}><NavButton>Find Your Shades</NavButton></li>
         </ul>
       </nav>
     </header>
