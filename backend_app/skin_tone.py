@@ -20,12 +20,13 @@ def extractSkin(image):
     face_cascade = cv2.CascadeClassifier(path)
     faces = face_cascade.detectMultiScale(
         img2,
-        scaleFactor = 1.05,
-        minNeighbors = 5,
-        minSize = [50, 50],
+        scaleFactor = 1.2,
+        minNeighbors = 3,
+        minSize = [30, 30],
     )
-    (face_x, face_y, face_w, face_h) = faces[0]
-    img = img[face_y:face_y+face_h, face_x:face_x+face_w]
+    if len(faces) > 0:
+        (face_x, face_y, face_w, face_h) = faces[0]
+        img = img[face_y:face_y+face_h, face_x:face_x+face_w]
     img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     # Defining HSV Threadholds
@@ -133,7 +134,7 @@ def getColorInformation(estimator_labels, estimator_cluster, hasThresholding=Fal
     return colorInformation
 
 
-def extractDominantColor(image, number_of_colors=4, hasThresholding=False):
+def extractDominantColor(image, number_of_colors=3, hasThresholding=False):
 
     # Quick Fix Increase cluster counter to neglect the black(Read Article)
     if hasThresholding == True:

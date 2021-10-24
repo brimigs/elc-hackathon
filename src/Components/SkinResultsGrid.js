@@ -3,7 +3,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Container from '@mui/material/Container'
 import Camera from '../Components/Camera';
+import Grid from '@mui/material/Grid'
 import WebcamCapture from "./Camera"
 import { styled } from '@mui/material/styles'
 import foundation from '../static/foundation.webp'
@@ -31,52 +33,49 @@ const style = {
     marginTop: "0.6rem",
   });
 
-export default function CardModal() {
-    // const [open, setColorOpen] = React.useState(false);
-    // const handleColorOpen = () => setColorOpen(true);
-    // const handleColorClose = () => setColorOpen(false);
+export default function SkinResultsGrid(props) {
+    const { submitted } = props
   
     return (
-      <div>
-          <div class="inner">
-                <h1>Your results:</h1>
+      <React.Fragment>
+        {submitted && <React.Fragment>
+            <div id="results">
+                <h2>Find the perfect product for you</h2>
             </div>
-            <div class = "cards">
+            <Grid container justifyContent="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
 
-                <div class="card">
-                <img src={foundation} alt="Estee Lauder Double Wear Stay-in-Place Foundation" ></img>
+                <Grid item class="card" xs={1} sm={2} md={3}>
+                <img src={foundation} alt="Estee Lauder Double Wear Stay-in-Place Foundation" width={250}></img>
                 <h4><b>Foundation</b></h4>
                 <p>0N1 ALABASTER</p>
-                </div>
+                </Grid>
                 
-                <div class="card">
-                <img src={concealer}  alt="Double Wear Stay-in-Place Flawless Wear Concealer"></img>
+                <Grid item class="card" xs={1} sm={2} md={3}>
+                <img src={concealer}  alt="Double Wear Stay-in-Place Flawless Wear Concealer" width={250}></img>
                 <h4><b>Concealer</b></h4>
                 <p>1C Light (COOL)</p>
-                </div>
+                </Grid>
                 
-                <div class="card">
-                <img src={eyebrows} alt="Brow Now Brow Defining Pencil"></img>
+                <Grid item class="card" xs={1} sm={2} md={3}>
+                <img src={eyebrows} alt="Brow Now Brow Defining Pencil" width={250}></img>
                 <h4><b>Eyebrows</b></h4>
                 <p>Dark Brunette</p>
-                </div>
+                </Grid>
                 
-                <div class="card">
-                <img src={blush}  alt="Pure Color Envy Sculpting Blush"></img>
+                <Grid item class="card" xs={1} sm={2} md={3}>
+                <img src={blush}  alt="Pure Color Envy Sculpting Blush" width={250}></img>
                 <h4><b>Blush</b></h4>
                 <p>220 Pink Kiss</p>
-                </div>
+                </Grid>
                 
-                <div class="card">
-                <img src={bronzer} alt="Bronze Goddess Powder Bronzer"></img>
+                <Grid item class="card" xs={1} sm={2} md={3}>
+                <img src={bronzer} alt="Bronze Goddess Powder Bronzer" width={250}></img>
                 <h4><b>Bronzer</b></h4>
                 <p>Light</p>
-                </div>
+                </Grid>
                 
-            </div>
-{/* 
-          </Box>
-        </Modal> */}
-      </div>
+            </Grid>
+            </React.Fragment>}
+          </React.Fragment>
     );
 }

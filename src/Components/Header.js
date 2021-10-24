@@ -2,10 +2,9 @@ import React from "react";
 import logo from '../static/Estee-Lauder-Logo.png';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles'
-import { Modal } from "@mui/material";
+import { Modal, Box } from "@mui/material";
 import BasicModal from "./Modal";
 import ColorModal from "./ColorModal";
-
 
 const MainButton = styled(Button)({
   fontSize: "0.9rem",
@@ -21,9 +20,14 @@ const NavButton = styled(MainButton)({
   padding: "0.6rem 1rem"
 })
 
-export default function Header() {
+export default function Header(props) {
+  const [hue, setHue] = React.useState(0.);
+  const [saturation, setSaturation] = React.useState(0.);
+  const [value, setValue] = React.useState(0.);
+
   var content;
 
+  const hsl_colors = 'hsl('+hue+','+saturation+'%,'+value+'%)'
   if (window.location.pathname === "/Beauty/" || window.location.pathname === "/Beauty") {
   content = (
     <React.Fragment>
@@ -42,9 +46,24 @@ export default function Header() {
   else if (window.location.pathname === "/Color/" || window.location.pathname === "/Color") {
     content = (
       <React.Fragment>
-            <h1>Welcome to the Color Lab</h1>
-            <p> Take a selfie to get an accurate color match for makeup. </p>
-            <ColorModal />  
+      { !props.submitted ? 
+            <React.Fragment>
+                  <h1>Welcome to the Color Lab</h1>
+                  <p> Take a selfie to get an accurate color match for makeup. </p>
+                  <ColorModal
+                    setHue = {setHue}
+                    setSaturation = {setSaturation}
+                    setValue = {setValue}
+                    setSubmitted = {props.setSubmitted}
+                  />  
+            </React.Fragment> :
+
+            <React.Fragment>
+                <h1>Your Color Lab Results</h1>
+                <p>Hue: {hue.toFixed(0)} Saturation: {saturation.toFixed(0)} Value: {value.toFixed(0)}</p>
+                <Box sx={{minHeight: "4rem", minWidth: "8rem", bgcolor: hsl_colors}}/>
+            </React.Fragment>
+          }
       </React.Fragment>
     )
   }

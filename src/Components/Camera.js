@@ -29,7 +29,14 @@ const MainButton = styled(Button)({
   marginTop: "0.6rem",
 });
 
-export default function  WebcamCapture  () {
+export default function  WebcamCapture (props) {
+
+    const {
+      closeModal,
+      setHue,
+      setSaturation,
+      setValue,
+      setSubmitted } = props
     const webcamRef = React.useRef(null);
     const [imgSrc, setImgSrc] = React.useState(null);
     const [toggle, setToggle] = React.useState(false);
@@ -48,6 +55,11 @@ export default function  WebcamCapture  () {
       await axios.post('/api/skinTone/', formData, {
         headers: {"Content-Type": "multipart/form-data"}
       }).then((response) => {
+        setHue(response.data.hue)
+        setSaturation(response.data.saturation)
+        setValue(response.data.value)
+        setSubmitted(true)
+        closeModal()
       }, (error) => {
       })
       setLoading(false)
