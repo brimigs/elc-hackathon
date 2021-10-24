@@ -9,19 +9,19 @@ import { styled } from '@mui/material/styles'
 import foundation from '../static/foundation.webp'
 import concealer from '../static/concealer.png'
 import eyebrows from '../static/eyebrows.png'
-import blush from '..static/Blush.png'
-import bronzer from '..static/bronzer.png'
+import blush from '../static/Blush.png'
+import bronzer from '../static/bronzer.png'
 
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 700,
+    width: '700',
     bgcolor: 'background.paper',
     border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
+    boxShadow: '24',
+    p: '4',
   };
   
   const MainButton = styled(Button)({
@@ -32,20 +32,20 @@ const style = {
   });
 
 export default function CardModal() {
-    const [open, setColorOpen] = React.useState(false);
-    const handleColorOpen = () => setColorOpen(true);
-    const handleColorClose = () => setColorOpen(false);
+    // const [open, setColorOpen] = React.useState(false);
+    // const handleColorOpen = () => setColorOpen(true);
+    // const handleColorClose = () => setColorOpen(false);
   
     return (
       <div>
-        <MainButton variant="contained" alt="Button to scan a product" onClick={handleColorOpen}>Scan Face</MainButton>
+        {/* <MainButton variant="contained" alt="Button to scan a product" onClick={handleColorOpen}>Results</MainButton>
         <Modal
           open={open}
           onClose={handleColorClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
+          <Box sx={style}> */}
           <div class="inner">
                 <h1>Your results:</h1>
             </div>
@@ -82,9 +82,9 @@ export default function CardModal() {
                 </div>
                 
             </div>
-
+{/* 
           </Box>
-        </Modal>
+        </Modal> */}
       </div>
     );
 }
