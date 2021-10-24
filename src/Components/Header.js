@@ -61,7 +61,7 @@ export default function Header() {
       <nav className = "use-middle">
         <ul>
           <li><NavButton onClick={() => {window.location.href="/Beauty"}}>Get Ready with Me</NavButton></li>
-          <li class="is-middle" onClick={() => {window.location.href="/Color"}}><NavButton>Find Your Shades</NavButton></li>
+          <li class="is-middle" ><NavButton onClick={() => {window.location.href="/Color"}}>Find Your Shades</NavButton ></li>
         </ul>
       </nav>
     </header>
