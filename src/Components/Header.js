@@ -3,8 +3,9 @@ import logo from '../static/Estee-Lauder-Logo.png';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles'
 import { Modal, Box } from "@mui/material";
-import BasicModal from "./Modal";
+import ScanModal from "./ScanModal";
 import ColorModal from "./ColorModal";
+import ProductResultsModal from "./ProductResultsModal";
 
 const MainButton = styled(Button)({
   fontSize: "0.9rem",
@@ -17,7 +18,8 @@ const NavButton = styled(MainButton)({
   margin: "0",
   width: "100%",
   height: "100%",
-  padding: "0.6rem 1rem"
+  padding: "0.6rem 1rem",
+  fontSize: "0.8rem",
 })
 
 export default function Header(props) {
@@ -32,7 +34,9 @@ export default function Header(props) {
   content = (
     <React.Fragment>
         <h1>Welcome to the Beauty Lab</h1>
-         <BasicModal />   
+        <p>Find out more about your product</p>
+         <ScanModal {...props}/>
+         <ProductResultsModal {...props}/>
     </React.Fragment>)
   }
   else if (window.location.pathname === "/App/" || window.location.pathname === "/App") {
@@ -80,8 +84,8 @@ export default function Header(props) {
       </div>
       <nav className = "use-middle">
         <ul>
-          <li><NavButton onClick={() => {window.location.href="/Beauty"}}>Get Ready with Me</NavButton></li>
-          <li class="is-middle" ><NavButton onClick={() => {window.location.href="/Color"}}>Find Your Shades</NavButton ></li>
+          <li><NavButton onClick={() => {window.location.href="/Color"}}>Find Your Shades</NavButton ></li>
+          <li class="is-middle"><NavButton onClick={() => {window.location.href="/Beauty"}}>Get Ready with Me</NavButton></li>
         </ul>
       </nav>
     </header>

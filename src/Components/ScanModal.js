@@ -10,7 +10,7 @@ import {
   Backdrop
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import WebcamCapture from "./Camera"
+import ProductCapture from "./ProductCamera"
 import { styled } from '@mui/material/styles'
 
 const style = {
@@ -44,14 +44,14 @@ const style = {
     marginTop: "0.6rem",
   });
 
-export default function ColorModal(props) {
+export default function ScanModal(props) {
     const [open, setColorOpen] = React.useState(false);
     const handleColorOpen = () => setColorOpen(true);
     const handleColorClose = () => setColorOpen(false);
   
     return (
       <div>
-        <MainButton variant="contained" alt="Button to match skin tone" onClick={handleColorOpen}>Scan Face</MainButton>
+        <MainButton variant="contained" alt="Button to scan a product" onClick={handleColorOpen}>Scan Product</MainButton>
         
         <Modal
           open={open}
@@ -65,12 +65,12 @@ export default function ColorModal(props) {
           <Grow in={open}>
           <Box sx={style.mainBox}>
               <Box sx={style.heading}>
-                  <Box sx={{flex: 1}}>COLOR LAB</Box>
+                  <Box sx={{flex: 1}}>BEAUTY LAB</Box>
                   <IconButton aria-label="close" onClick={handleColorClose}>
                       <CloseIcon />
                   </IconButton>
               </Box>
-              <WebcamCapture
+              <ProductCapture
                 closeModal={handleColorClose}
                 {...props}
               />
