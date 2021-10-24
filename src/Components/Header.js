@@ -2,6 +2,9 @@ import React from "react";
 import logo from '../static/Estee-Lauder-Logo.png';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles'
+import { Modal } from "@mui/material";
+import BasicModal from "./Modal";
+
 
 const MainButton = styled(Button)({
   fontSize: "0.9rem",
@@ -24,7 +27,9 @@ export default function Header() {
   content = (
     <React.Fragment>
         <h1>Welcome to the Beauty Lab</h1>
-        <MainButton variant="contained" alt="Button to scan a product"> Scan A Product </MainButton>                
+            
+        <MainButton className={classes.centralButton} variant="contained" alt="Button to scan a product"> <BasicModal className={classes.centralButton} variant="contained" alt="Button to scan a product"/> Scan A Product</MainButton>                
+
     </React.Fragment>)
   }
   else if (window.location.pathname === "/App") {
