@@ -65,6 +65,13 @@ export default function  WebcamCapture (props) {
       setLoading(false)
     }
 
+    // function showResults () = {
+
+
+    // }
+
+
+
     return (
       <React.Fragment>
         <Loading open={loading}/>
