@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles'
 import { Modal } from "@mui/material";
 import BasicModal from "./Modal";
+import ColorModal from "./ColorModal";
 
 
 const MainButton = styled(Button)({
@@ -43,7 +44,7 @@ export default function Header() {
       <React.Fragment>
             <h1>Welcome to the Color Lab</h1>
             <p> Take a selfie to get an accurate color match for makeup. </p>
-            <BasicModal />  
+            <ColorModal />  
       </React.Fragment>
     )
   }

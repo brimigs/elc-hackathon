@@ -17,8 +17,6 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    height: '100%',
-    overflowY: 'scroll'
   };
   
   const MainButton = styled(Button)({
@@ -28,30 +26,25 @@ const style = {
     marginTop: "0.6rem",
   });
 
-  const Scrolly = styled(Modal)({
-    height: '100%',
-    overflowY: 'scroll',
-  });
-
-export default function BasicModal() {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+export default function ColorModal() {
+    const [open, setColorOpen] = React.useState(false);
+    const handleColorOpen = () => setColorOpen(true);
+    const handleColorClose = () => setColorOpen(false);
   
     return (
       <div>
-        <MainButton variant="contained" alt="Button to scan a product" onClick={handleOpen}>Scan Product</MainButton>
-        <Scrolly
+        <MainButton variant="contained" alt="Button to scan a product" onClick={handleColorOpen}>Scan Face</MainButton>
+        <Modal
           open={open}
-          onClose={handleClose}
+          onClose={handleColorClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
             <WebcamCapture />
-           
+            
           </Box>
-        </Scrolly>
+        </Modal>
       </div>
     );
-  }
+}

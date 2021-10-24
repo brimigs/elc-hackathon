@@ -1,4 +1,4 @@
-import logo from './static/Estee-Lauder-Logo.png';
+
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import * as React from 'react';
