@@ -6,6 +6,7 @@ import { Modal, Box } from "@mui/material";
 import ScanModal from "./ScanModal";
 import ColorModal from "./ColorModal";
 import ProductResultsModal from "./ProductResultsModal";
+import ChatModal from './ChatModal'
 
 const MainButton = styled(Button)({
   fontSize: "0.9rem",
@@ -44,7 +45,7 @@ export default function Header(props) {
     <React.Fragment>
           <h1>Hi, I'm Iris! </h1><br/> <h2>Your personal beauty assistant</h2> 
           <p> I'm here to help you through your beauty journey. </p>
-          <MainButton variant="contained" alt="Button to chat now"> Chat Now </MainButton> 
+          <ChatModal />
     </React.Fragment>)
   }
   else if (window.location.pathname === "/Color/" || window.location.pathname === "/Color") {

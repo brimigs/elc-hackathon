@@ -1,0 +1,91 @@
+/* DIFFERENT CSS */
+* {
+  font-family: 'Helvetica';
+  background-color: black;
+  font-size: 17px;
+  letter-spacing: .07em;
+  overflow: scroll;
+}
+
+.header {
+  padding: 40px;
+  text-align: center; 
+  font-size: 20px;
+  position: fixed;
+  left: 0;
+  top: 0; 
+  width: 100%;
+  border: #9eafff solid;
+  background-color: white;
+}
+
+.bubbleWrapper {
+  padding: 5px 5px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-self: flex-end;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+.inlineContainer {
+  display: inline-flex;
+}
+.inlineContainer.own {
+  flex-direction: row-reverse;
+}
+.inlineIcon {
+  width:20px;
+  object-fit: contain;
+}
+.ownBubble {
+  min-width: 20px;
+  max-width: 500px;
+  padding: 14px 18px;
+  margin: 6px 8px;
+  background-color: #ffffff;
+  border-radius: 16px 16px 0 16px;
+  text-align: right;
+ 
+}
+.otherBubble {
+  min-width: 10px;
+  max-width: 500px;
+  padding: 14px 18px;
+  margin: 6px 8px;
+  background-color: #9eafff;
+  border-radius: 16px 16px 16px 0;
+  
+}
+.own {
+  align-self: flex-end;
+}
+.other {
+  align-self: flex-start;
+}
+span.own,
+span.other{
+  font-size: 80px;
+  color: white;
+}
+
+#chatbox {
+  height: 80px;
+  width: 100%;
+  background-color: #1b1f22;
+  font: 15px helvetica, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+.user-img {
+  display: inline-block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: #2671ff;
+  margin: 0 10px 10px 0;
+}
