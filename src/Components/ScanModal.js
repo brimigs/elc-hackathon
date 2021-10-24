@@ -29,6 +29,7 @@ const style = {
       borderRadius: 10,
       display: 'flex',
       flexDirection: "column",
+      color: 'black',
     },
     heading: {
       minHeight: 50,
