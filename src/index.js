@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Color from './Pages/Color'
 import Beauty from './Pages/Beauty'
+import Login from './Pages/Login'
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +16,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#fff'
+      dark: '#fff',
+      main: '#fff',
+      light: '#fff'
     },
     secondary: {
       main: '#040a2b'
@@ -39,6 +42,9 @@ ReactDOM.render(
           </Route>
           <Route exact path="/Color">
             <Color />
+          </Route>
+          <Route exact path="/">
+            <Login />
           </Route>
         </Switch>
     </Router>

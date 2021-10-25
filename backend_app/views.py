@@ -30,6 +30,12 @@ def handleError(errorForm):
 
 @never_cache
 @ensure_csrf_cookie
+def login(request):
+    return render(request, 'index.html')
+
+@never_cache
+@ensure_csrf_cookie
+@login_required
 def basic(request):
     '''
     Handle simple requests
@@ -38,6 +44,7 @@ def basic(request):
 
 @never_cache
 @ensure_csrf_cookie
+@login_required
 def skin_tone(request):
     '''
     Handle skin tone calculation request

@@ -20,7 +20,7 @@ import backend_app.views as views
 
 urlpatterns = [
     # basic pages
-    re_path(r'^$', views.basic, name='index'),
+    re_path(r'^$', views.login, name='login'),
     re_path(r'^App/$', views.basic, name='app'),
     re_path(r'^Beauty/$', views.basic, name='beauty'),
     re_path(r'^Color/$', views.basic, name='color'),
